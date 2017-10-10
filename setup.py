@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(name='yamlmd',
       version='0.1.0',
@@ -10,4 +10,5 @@ setup(name='yamlmd',
       author_email='dashton@mango-solutions.com',
       license='MIT',
       packages=['yamlmd'],
-      zip_safe=False)
+      zip_safe=False,
+      install_requires=['pyyaml>3'])
