@@ -36,4 +36,4 @@ def read_markdown(fname):
 
 def read_yamlmd(fname):
     """Doug do the docstring"""
-    return [read_yaml_header(fname), read_markdown(fname)]
+    return (read_yaml_header(fname), read_markdown(fname))
