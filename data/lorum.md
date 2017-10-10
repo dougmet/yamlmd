@@ -1,6 +1,9 @@
 ---
 title: Lorum Test
 author: Doug Ashton
+alist:
+  - item1
+  - item2
 ---
 
 # Lorum Header
