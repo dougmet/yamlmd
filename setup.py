@@ -9,6 +9,6 @@ setup(name='yamlmd',
       author='Doug Ashton',
       author_email='dashton@mango-solutions.com',
       license='MIT',
-      packages=['yamlmd'],
+      packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
       zip_safe=False,
       install_requires=['pyyaml>3'])
