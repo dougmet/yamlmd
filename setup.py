@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(name='yamlmd',
-      version='0.1.2',
+      version='0.1.3',
       description='Read and write to Markdown files with yaml headers',
       url='https://github.com/dougmet/yamlmd',
       author='Doug Ashton',

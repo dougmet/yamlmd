@@ -1,6 +1,6 @@
 """Read and write to yaml headed Markdown files"""
 
-__version__ = "0.1.1"
+__version__ = "0.1.33"
 __author__ = "Doug Ashton <douglas.j.ashton@gmail.com>"
 
 # Load key components

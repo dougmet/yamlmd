@@ -21,6 +21,8 @@ def write_yaml_header(x):
     # Write out
     yaml.dump(x, strio)
     yaml_lines = strio.getvalue()
+    strio.close()
+
     header_lines = ["---\n", yaml_lines, "---\n"]
 
     return header_lines
