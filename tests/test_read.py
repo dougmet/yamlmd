@@ -11,16 +11,14 @@ import pytest
 
 base_path = os.path.dirname(os.path.realpath(__file__))
 
+# %% read test
+
 
 def test_read():
     """Check that the main read function works"""
     lorum_file = os.path.join(base_path, "data", "lorum.md")
     lorum = read_yamlmd(lorum_file)
-    data_types = [type(x) for x in lorum]
-    expect(
-        (len(lorum) == 2, "Returned tuple must be length 2"),
-        (data_types[0] == "dict", "First element must be dict"),
-        (data_types[1] == "list", "Second element must be list")
-    )
 
-    report_failures(error=False, display=True, clear=clear)
+    assert len(lorum) == 2
+    assert isinstance(lorum[0], dict)
+    assert isinstance(lorum[1], list)

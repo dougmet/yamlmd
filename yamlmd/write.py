@@ -5,13 +5,22 @@ Created on Tue Oct 10 13:43:17 2017
 @author: dashton
 """
 
-import yaml
+from ruamel.yaml import YAML
+import io
 
 # %% The yaml header part
 
 
 def write_yaml_header(x):
-    yaml_lines = yaml.safe_dump(x, default_flow_style=False)
+    """Write the yaml header to a string"""
+    # Need a string as a file to write to
+    strio = io.StringIO()
+    # Set the yaml object for pretty printing
+    yaml = YAML(typ='rt')
+    yaml.default_flow_style = False
+    # Write out
+    yaml.dump(x, strio)
+    yaml_lines = strio.getvalue()
     header_lines = ["---\n", yaml_lines, "---\n"]
 
     return header_lines

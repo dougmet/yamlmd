@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(name='yamlmd',
-      version='0.1.1',
+      version='0.1.2',
       description='Read and write to Markdown files with yaml headers',
       url='https://github.com/dougmet/yamlmd',
       author='Doug Ashton',
@@ -11,4 +11,4 @@ setup(name='yamlmd',
       license='MIT',
       packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
       zip_safe=False,
-      install_requires=['pyyaml>3'])
+      install_requires=['ruamel.yaml>0.15'])
