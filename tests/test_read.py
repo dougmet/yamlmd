@@ -6,6 +6,7 @@ Created on Tue Oct 10 16:54:09 2017
 """
 
 from yamlmd import read_yamlmd
+import ruamel.yaml
 import os
 import pytest
 
@@ -20,5 +21,5 @@ def test_read():
     lorum = read_yamlmd(lorum_file)
 
     assert len(lorum) == 2
-    assert isinstance(lorum[0], dict)
+    assert isinstance(lorum[0], ruamel.yaml.comments.CommentedMap)
     assert isinstance(lorum[1], list)
