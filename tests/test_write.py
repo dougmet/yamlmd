@@ -20,7 +20,7 @@ def test_read(tmpdir):
     test_header = ruamel.yaml.comments.CommentedMap({"a": 1})
     test_md = ["\n", "the first thing\n"]
 
-    tmp_file = tmpdir.mkdir("md").join("test.md")
+    tmp_file = tmpdir.mkdir("md").join("test.md").strpath
 
     write_yamlmd([test_header, test_md], tmp_file)
 
