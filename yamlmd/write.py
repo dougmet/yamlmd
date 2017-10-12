@@ -35,5 +35,5 @@ def write_yamlmd(yamlmd, fname):
     header_lines = write_yaml_header(yamlmd[0])
 
     output = header_lines + yamlmd[1]
-    with open(fname, 'w') as f:
+    with open(fname, 'w', encoding='UTF-8') as f:
         f.writelines(output)
