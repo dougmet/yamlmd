@@ -23,7 +23,7 @@ def read_yaml_header(fname):
 
 def read_markdown(fname):
     """Extract the markdown component under the yaml header"""
-    with open(fname) as f:
+    with open(fname, encoding="UTF-8") as f:
         content = f.readlines()
     yaml_delim = [i for i, x in enumerate(content) if x.startswith("---")]
     assert len(yaml_delim) > 1
