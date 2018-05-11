@@ -5,4 +5,4 @@ __author__ = "Doug Ashton <douglas.j.ashton@gmail.com>"
 
 # Load key components
 from .read import read_yamlmd
-from .write import write_yamlmd
+from .write import write_yamlmd, write_yaml, write_md

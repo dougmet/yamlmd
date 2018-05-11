@@ -12,7 +12,7 @@ import io
 
 
 def write_yaml_header(x):
-    """Write the yaml header to a string"""
+    """Write yaml part of the header to a string"""
     # Need a string as a file to write to
     strio = io.StringIO()
     # Set the yaml object for pretty printing
@@ -25,15 +25,34 @@ def write_yaml_header(x):
 
     header_lines = ["---\n", yaml_lines, "---\n"]
 
-    return header_lines
+    return yaml_lines
 
 # %% Combine
 
 
 def write_yamlmd(yamlmd, fname):
-    """Doug docstrings!"""
-    header_lines = write_yaml_header(yamlmd[0])
+    """Combine head and content and write to a markdown file"""
+    yaml_lines = write_yaml_header(yamlmd[0])
 
-    output = header_lines + yamlmd[1]
+    output = ["---\n", yaml_lines, "---\n"] + yamlmd[1]
     with open(fname, 'w', encoding='UTF-8') as f:
         f.writelines(output)
+
+# %% One on its own
+        
+def write_yaml(yamlmd, fname):
+    """Only write the yaml component to a file"""
+    output = write_yaml_header(yamlmd[0])
+
+    with open(fname, 'w', encoding='UTF-8') as f:
+        f.writelines(output)
+        
+def write_md(yamlmd, fname):
+    """Only write the content component to a file"""
+    output = yamlmd[1]
+    
+    with open(fname, 'w', encoding='UTF-8') as f:
+        f.writelines(output)
+
+    
+    
