@@ -5,7 +5,7 @@ Created on Tue Oct 10 16:54:09 2017
 @author: dashton
 """
 
-from yamlmd import write_yamlmd
+from yamlmd import write_yamlmd, write_yaml, write_md
 import ruamel.yaml
 from ruamel.yaml import YAML
 import os
