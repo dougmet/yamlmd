@@ -39,20 +39,22 @@ def write_yamlmd(yamlmd, fname):
         f.writelines(output)
 
 # %% One on its own
-        
+
+
 def write_yaml(yamlmd, fname):
     """Only write the yaml component to a file"""
     output = write_yaml_header(yamlmd[0])
 
     with open(fname, 'w', encoding='UTF-8') as f:
         f.writelines(output)
-        
+
+
 def write_md(yamlmd, fname):
     """Only write the content component to a file"""
     output = yamlmd[1]
-    
+
     with open(fname, 'w', encoding='UTF-8') as f:
         f.writelines(output)
 
-    
+
     
